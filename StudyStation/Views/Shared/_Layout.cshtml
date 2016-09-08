@@ -6,9 +6,20 @@
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
 </head>
+<h1>@ViewBag.Title</h1>
+<navbar>
+    <a href="\Home\Index">Home</a>
+    <a href="\Dashboard\Dashboard">Dashboard</a>
+    <a href="\Kanban\Kanban">Kanban</a>
+    <a hrer="\Calendar\Calendar">Calendar</a>
+    <a href="\Study\Study">Study</a>
+    <a href="\Settings\Settings">Settings</a>
+</navbar>
+
 <body>
     <div class="container-fluid">
         @RenderBody()
+        
     </div>
 
     @RenderSection("scripts", false)
