@@ -4,24 +4,40 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/main.css" />
 </head>
-<h1>@ViewBag.Title</h1>
-<navbar>
-    <a href="\Home\Index">Home</a>
-    <a href="\Dashboard\Dashboard">Dashboard</a>
-    <a href="\Kanban\Kanban">Kanban</a>
-    <a hrer="\Calendar\Calendar">Calendar</a>
-    <a href="\Study\Study">Study</a>
-    <a href="\Settings\Settings">Settings</a>
-</navbar>
+
+<ul class="navbar">
+    @*<li><a href="\Home\Index">Home</a></li>*@
+    <li><a href="\Dashboard\Dashboard">Dashboard</a></li>
+    <li><a href="\Kanban\Kanban">Kanban</a></li>
+    <li><a href="\Calendar\Calendar">Calendar</a></li>
+    <li><a href="\Study\Study">Study</a></li>
+    <li><a href="\Settings\Settings">Settings</a></li>
+</ul>
 
 <body>
     <div class="container-fluid">
         @RenderBody()
-        
+
+          
     </div>
 
+    <div class="container">
+
+    <h1>@ViewBag.Title</h1>
+    <p>adslfkjfa <br />
+        asdflkjasdfn<br />
+        asdflk;jsad;lkf<br />
+        asdlfkjasdf;lk<br />
+        asdflkasdjflaskdjfsadlkfj<br />
+        dfalsdkfjsa;ldk</p>
+
+    </div>
+    <div class="copyright">Study Station &copy; 2016</div>
     @RenderSection("scripts", false)
 </body>
+
+
+
 </html>

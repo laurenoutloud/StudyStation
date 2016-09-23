@@ -1,0 +1,47 @@
+﻿
+html, body, h1, h2, h3, h4, ul, ol, li, p, a {
+	padding: 0;
+	border: 0;
+	margin: 0;
+    color: #7e7e7e;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color:cornsilk;
+}
+
+body .container {
+    width: 80%;
+    margin: auto;
+    height: auto;
+    padding: 10px;
+    background-color:#fafafa;
+}
+
+/*Navigation bar styles*/
+.navbar {
+    background: #90EE90; /*bacground color (light green)*/
+    text-align: center;
+    height: auto;
+    width: 100%;
+    margin: auto;
+}
+
+.navbar li{
+    color: #fafafa;
+    padding: 20px 10px 20px 10px;
+    font-size: 30px;
+    display: inline-block;
+}
+
+
+a {
+    text-decoration: inherit;
+    color: inherit; /*links will inherit color*/
+}
+
+.copyright {
+    text-align: center;
+    padding: 5px;
+}
