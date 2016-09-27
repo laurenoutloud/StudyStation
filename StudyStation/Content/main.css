@@ -112,14 +112,15 @@ body .completedTaskWall {
     margin: 5px;
 }
 
-body .kanbanSummary {
-    background: #7e7e7e;
-    color: #90EE90;
-    padding: 2px;
-    width: 100px;
-    text-align: center;
-    display: inline-block;
+body .summary {
+    width: 100%;
+    background: cornsilk;
     margin: 5px;
+}
+
+body .summary td {
+    text-align: center;
+    font-size: 50px;
 }
 
 body .login {
