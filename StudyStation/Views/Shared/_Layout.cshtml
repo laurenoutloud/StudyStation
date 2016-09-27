@@ -17,23 +17,22 @@
 </ul>
 
 <body>
-    <div class="container-fluid">
-        @RenderBody()
-
-          
-    </div>
+    
 
     <div class="container">
 
     <h1>@ViewBag.Title</h1>
-    <p>adslfkjfa <br />
-        asdflkjasdfn<br />
-        asdflk;jsad;lkf<br />
-        asdlfkjasdf;lk<br />
-        asdflkasdjflaskdjfsadlkfj<br />
-        dfalsdkfjsa;ldk</p>
+
 
     </div>
+
+    <div class="container-fluid">
+        @RenderBody()
+
+
+    </div>
+
+
     <div class="copyright">Study Station &copy; 2016</div>
     @RenderSection("scripts", false)
 </body>

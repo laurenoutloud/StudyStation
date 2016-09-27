@@ -11,12 +11,126 @@ body {
     background-color:cornsilk;
 }
 
+
 body .container {
     width: 80%;
     margin: auto;
     height: auto;
     padding: 10px;
     background-color:#fafafa;
+}
+
+body .text {
+    margin: 5px;
+}
+
+body .select {
+    margin: 5px;
+}
+
+body .label {
+    margin:5px;
+    width: 150px;
+    display: inline-block;
+}
+
+body .button {
+    margin: 5px;
+}
+
+body .timer {
+    text-align: center;
+    width: 75%;
+    height: 500px;
+    line-height: 500px;
+    margin: auto;
+    border: 10px solid #90EE90;
+    ; 
+    color: #fafafa;
+    background: #7e7e7e;
+    vertical-align: middle;
+    font-size: 400px;
+}
+
+body .calendar {
+    text-align: center;
+    width: 75%;
+    height: 550px;
+    line-height: 150px;
+    margin: auto;
+    border: solid;
+    border-color: #90EE90; 
+    color: #fafafa;
+    background: #7e7e7e;
+    vertical-align: middle;
+    font-size: 70px;
+}
+
+body .kanban {
+    background: #7e7e7e;
+    width: 100%;
+    margin: auto;
+    color: #fafafa;
+    border: solid;
+    border-color: #90EE90; 
+    border-collapse: collapse;
+    border-style: hidden;
+    padding: 5px;
+
+}
+
+body .graph {
+   height: 300px;
+    border: solid;
+    border-color: #90EE90; 
+    color: #fafafa;
+    background: #7e7e7e;
+    vertical-align: middle;
+    font-size: 70px;
+   display:inline-block;
+   
+}
+
+body .table, th, td{
+    
+    border: 8px solid #90EE90;
+}
+
+th {
+    font-size: 50px;
+    height: auto;
+}
+
+body .completedTaskWall {
+    width: 100%;
+    margin: auto;
+    background: #7e7e7e;
+    height: 400px;
+    max-height: 400px;
+    overflow: auto;
+    padding: 5px;
+    margin: 5px;
+}
+
+body .kanbanSummary {
+    background: #7e7e7e;
+    color: #90EE90;
+    padding: 2px;
+    width: 100px;
+    text-align: center;
+    display: inline-block;
+    margin: 5px;
+}
+
+body .login {
+    display:inline-block;
+    width: 40%;
+    vertical-align:top;
+    
+}
+body .signup {
+    display:inline-block;
+    width:40%;
 }
 
 /*Navigation bar styles*/
@@ -26,6 +140,16 @@ body .container {
     height: auto;
     width: 100%;
     margin: auto;
+}
+
+.task {
+    background: cornsilk;
+    margin: 5px;
+    padding: 5px;
+    color: #7e7e7e;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
 }
 
 .navbar li{

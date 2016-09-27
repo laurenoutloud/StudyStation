@@ -2,4 +2,98 @@
 @{
     ViewBag.Title = "Settings";
 }
+<body>
 
+
+    <div class="container">
+        <form>
+            <h3>Account</h3>
+            <div class="label">First Name:</div> <input type="text" name="firstName" class="text"/><br />
+            <div class="label">Last Name:</div> <input type="text" name="lastName" class="text" /><br />
+            <div class="label">Birthday:</div> <input type="text" name="birthday" class="text" /><br />
+            <div class="label">Phone Number:</div> <input type="text" name="phoneNumber" class="text" /><br />
+            <div class="label">Email:</div> <input type="text" name="email" class="text" /><br />
+            <div class="label">Password:</div> <input type="text" name="lastName" class="text" /><br />
+
+            <h3>Preferences</h3>
+            <div class="label">Interval Length:</div>
+            <select class="select">
+                <option value="intervalLength">5</option>
+                <option value="intervalLength">10</option>
+                <option value="intervalLength">15</option>
+                <option value="intervalLength">20</option>
+                <option selected ="selected" value="intervalLength">25</option>
+                <option value="intervalLength">30</option>
+                <option value="intervalLength">35</option>
+                <option value="intervalLength">40</option>
+                <option value="intervalLength">45</option>
+                <option value="intervalLength">50</option>
+                <option value="intervalLength">55</option>
+                <option value="intervalLength">60</option>
+            </select> Minutes <br />
+            <div class="label">Short Break Length:</div>
+            <select class="select">
+                <option selected="selected" value="shortBreakLength">5</option>
+                <option value="shortBreakLength">10</option>
+                <option value="shortBreakLength">15</option>
+                <option value="shortBreakLength">20</option>
+                <option value="shortBreakLength">25</option>
+                <option value="shortBreakLength">30</option>
+                <option value="shortBreakLength">35</option>
+                <option value="shortBreakLength">40</option>
+                <option value="shortBreakLength">45</option>
+                <option value="shortBreakLength">50</option>
+                <option value="shortBreakLength">55</option>
+                <option value="shortBreakLength">60</option>
+            </select> Minutes <br />
+            <div class="label">Long Break Length:</div>
+            <select class="select">
+                <option value="longBreakLength">5</option>
+                <option value="longBreakLength">10</option>
+                <option selected="selected" value="longBreakLength">15</option>
+                <option value="longBreakLength">20</option>
+                <option value="longBreakLength">25</option>
+                <option value="longBreakLength">30</option>
+                <option value="longBreakLength">35</option>
+                <option value="longBreakLength">40</option>
+                <option value="longBreakLength">45</option>
+                <option value="longBreakLength">50</option>
+                <option value="longBreakLength">55</option>
+                <option value="longBreakLength">60</option>
+            </select> Minutes <br />
+            <div class="label">Break After:</div> 
+                <select class="select">
+                    <option value="breakAfter">0</option>
+                    <option value="breakAfter">1</option>
+                    <option value="breakAfter">2</option>
+                    <option value="breakAfter">3</option>
+                    <option selected="selected" value="breakAfter">4</option>
+                    <option value="breakAfter">5</option>
+                    <option value="breakAfter">6</option>
+                    <option value="breakAfter">7</option>
+                    <option value="breakAfter">8</option>
+                    <option value="breakAfter">9</option>
+                    <option value="breakAfter">10</option>   
+                </select> Intervals <br />
+            <div class="label">Daily Interval Goal:</div>
+            <select class="select">
+                <option value="dailyIntervalGoal">0</option>
+                <option value="dailyIntervalGoal">1</option>
+                <option value="dailyIntervalGoal">2</option>
+                <option value="dailyIntervalGoal">3</option>
+                <option value="dailyIntervalGoal">4</option>
+                <option value="dailyIntervalGoal">5</option>
+                <option value="dailyIntervalGoal">6</option>
+                <option value="dailyIntervalGoal">7</option>
+                <option selected="selected" value="dailyIntervalGoal">8</option>
+                <option value="dailyIntervalGoal">9</option>
+                <option value="dailyIntervalGoal">10</option>
+            </select> Intervals <br />
+
+            <button class="button">Edit</button>
+            <button class="buton">Save</button>
+            <button class="button">Cancel</button>
+
+</form>
+    </div>
+</body>
