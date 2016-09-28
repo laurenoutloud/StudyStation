@@ -1,4 +1,4 @@
-﻿
+﻿@*Add title to viewbag*@
 @{ 
     ViewBag.Title = "Kanban";
 }
@@ -9,7 +9,7 @@
     <div class="container">
         <form>
 
-
+            @*Create table to replicate kanban wall*@
             <table class="kanban">
                 <tr>
                     <th width="10%"></th>
@@ -38,7 +38,8 @@
                
             </table>
 
-
+            @*TODO: add popups that allow user to enter information when buttons are selected*@
+            @*TODO: Edit button to allow users to move tasks*@
             <button class="button">Add Course</button>
             <button class="button">Add Task</button>
 

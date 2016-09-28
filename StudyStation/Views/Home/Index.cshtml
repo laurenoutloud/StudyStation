@@ -1,4 +1,4 @@
-﻿
+﻿@*Add title to viewbag*@
 @{
     ViewBag.Title = "Home";
 }
@@ -7,14 +7,16 @@
 
 
     <div class="container">
+        @*Form Begins*@
         <form>
+            @*Create div tag of class login*@
             <div class="login">
                 <h3>Log In</h3>
                 <div class="label">Email:</div> <input type="text" name="email" class="text" /><br />
                 <div class="label">Password:</div> <input type="text" name="password" class="text" /><br />
                 <button class="button">Log In</button>
             </div>
-
+            @*Create div tag of class signup*@
             <div class="signup">
                 <h3>Sign Up</h3>
                 <div class="label">First Name:</div> <input type="text" name="firstName" class="text" /><br />

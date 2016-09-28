@@ -1,4 +1,5 @@
-﻿@{
+﻿@*Add title to viewbag*@
+@{
     ViewBag.Title = "Dashboard";
 }
 
@@ -6,7 +7,7 @@
 
 
     <div class="container">
-
+        @*Selectbox for user to select desired time frame*@
         <div class="label">Select Time Frame:</div>
             <select class="select">
                 <option>Today</option>
@@ -18,6 +19,7 @@
 
 
         <h3>Kanban Summary</h3>
+        @*Table to provide a summary of all tasks that are currently on the virtual kanban wall*@
         <table class="summary">
             <tr>
                 <th width="33%">To Do</th>
@@ -31,7 +33,7 @@
             </tr>
             </table>
 
-
+            @*Container that will contain list of all completed tasks from within the selected time frame*@
             <h3>Completed Tasks Wall</h3>
             <div class="completedTaskWall">
                 <div class="task">dfasd</div>
@@ -91,6 +93,7 @@
 
 
             <h3>Statistics</h3>
+            @*TODO: Implement graphs*@
             <div class="graph">Graph Will Go Here</div>
             <div class="graph">Graph Will Go Here</div>
 

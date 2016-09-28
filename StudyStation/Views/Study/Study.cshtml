@@ -1,4 +1,4 @@
-﻿
+﻿@*Add title to viewbag*@
 @{
     ViewBag.Title = "Study";
 }
@@ -8,12 +8,15 @@
 
     <div class="container">
         <form>
+            @*Selectbox that allows user to select a course*@
             <div class="label">Select Course:</div>
             <select class="select">
                 <option value="courseName">Course 101</option>
                 <option value="courseName">Course 202</option>
                 <option value="courseName">Course 303</option>
             </select><br />
+
+            @*Selectbox that populates with tasks based on the course selected from Select Course selectbox*@
             <div class="label">Select Task:</div>
             <select class="select">
                 <option value="taskName">Task 1</option>
@@ -22,7 +25,7 @@
             </select><br />
 
             <button class="button">Begin Studying</button>
-
+            @*TODO: Implement timer*@
             <div class="timer">25:00</div><br />
 
         </form>

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="~/Content/main.css" />
 </head>
 
+@*Navigation Bar*@
 <ul class="navbar">
     @*<li><a href="\Home\Index">Home</a></li>*@
     <li><a href="\Dashboard\Dashboard">Dashboard</a></li>
@@ -17,26 +18,20 @@
 </ul>
 
 <body>
-    
 
     <div class="container">
-
-    <h1>@ViewBag.Title</h1>
-
+        @*Display page title from viewbag*@
+        <h1>@ViewBag.Title</h1>
 
     </div>
 
     <div class="container-fluid">
         @RenderBody()
-
-
     </div>
 
 
     <div class="copyright">Study Station &copy; 2016</div>
     @RenderSection("scripts", false)
 </body>
-
-
 
 </html>

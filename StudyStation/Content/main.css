@@ -1,4 +1,4 @@
-﻿
+﻿/*Get rid of browser default settings by initializing to 0*/
 html, body, h1, h2, h3, h4, ul, ol, li, p, a {
 	padding: 0;
 	border: 0;
@@ -7,11 +7,12 @@ html, body, h1, h2, h3, h4, ul, ol, li, p, a {
     font-family:Arial, Helvetica, sans-serif;
 }
 
+/*format body background color*/
 body {
     background-color:cornsilk;
 }
 
-
+/*Format body container that contains the content*/
 body .container {
     width: 80%;
     margin: auto;
@@ -20,24 +21,25 @@ body .container {
     background-color:#fafafa;
 }
 
+/*Format body textboxes with class text*/
 body .text {
     margin: 5px;
 }
-
+/*format body selectboxes with class select*/
 body .select {
     margin: 5px;
 }
-
+/*Format body div tags with class label*/
 body .label {
     margin:5px;
     width: 150px;
     display: inline-block;
 }
-
+/*Format body buttons of class button*/
 body .button {
     margin: 5px;
 }
-
+/*Format the container of class timer*/
 body .timer {
     text-align: center;
     width: 75%;
@@ -51,7 +53,7 @@ body .timer {
     vertical-align: middle;
     font-size: 400px;
 }
-
+/*Format calendar placeholder*/
 body .calendar {
     text-align: center;
     width: 75%;
@@ -65,7 +67,7 @@ body .calendar {
     vertical-align: middle;
     font-size: 70px;
 }
-
+/*Format the body table of class kanban*/
 body .kanban {
     background: #7e7e7e;
     width: 100%;
@@ -78,7 +80,7 @@ body .kanban {
     padding: 5px;
 
 }
-
+/*Format the graph placeholders*/
 body .graph {
    height: 300px;
     border: solid;
@@ -90,17 +92,16 @@ body .graph {
    display:inline-block;
    
 }
-
+/*format tables, table headers, and table data*/
 body .table, th, td{
-    
     border: 8px solid #90EE90;
 }
-
+/*Format the table headers*/
 th {
     font-size: 50px;
     height: auto;
 }
-
+/*Format completed task wall*/
 body .completedTaskWall {
     width: 100%;
     margin: auto;
@@ -111,24 +112,25 @@ body .completedTaskWall {
     padding: 5px;
     margin: 5px;
 }
-
+/*Format the summary table*/
 body .summary {
     width: 100%;
     background: cornsilk;
     margin: 5px;
 }
-
+/*Format the summary table table data*/
 body .summary td {
     text-align: center;
     font-size: 50px;
 }
-
+/*Format the login container*/
 body .login {
     display:inline-block;
     width: 40%;
     vertical-align:top;
     
 }
+/*Format the signup container*/
 body .signup {
     display:inline-block;
     width:40%;
@@ -142,7 +144,7 @@ body .signup {
     width: 100%;
     margin: auto;
 }
-
+/*Format the div tags of class task*/
 .task {
     background: cornsilk;
     margin: 5px;
@@ -153,6 +155,7 @@ body .signup {
     width: 100px;
 }
 
+/*Format the navigation bar items*/
 .navbar li{
     color: #fafafa;
     padding: 20px 10px 20px 10px;
@@ -160,12 +163,13 @@ body .signup {
     display: inline-block;
 }
 
-
+/*Format hyperlinks*/
 a {
     text-decoration: inherit;
     color: inherit; /*links will inherit color*/
 }
 
+/*Format copyright container*/
 .copyright {
     text-align: center;
     padding: 5px;

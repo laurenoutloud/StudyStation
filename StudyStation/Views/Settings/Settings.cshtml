@@ -1,4 +1,4 @@
-﻿
+﻿@*Add title to viewbag*@
 @{
     ViewBag.Title = "Settings";
 }
@@ -7,22 +7,28 @@
 
     <div class="container">
         <form>
+            @*TODO: Disable everything unless edit button is selected*@
+
+            @*Account settings text boxes*@
             <h3>Account</h3>
-            <div class="label">First Name:</div> <input type="text" name="firstName" class="text"/><br />
+            <div class="label">First Name:</div> <input type="text" name="firstName" class="text" /><br />
             <div class="label">Last Name:</div> <input type="text" name="lastName" class="text" /><br />
+            @*TODO: Make birthday date select*@
             <div class="label">Birthday:</div> <input type="text" name="birthday" class="text" /><br />
+            @*TODO: FOrmat Phone number textbox for numbers only*@
             <div class="label">Phone Number:</div> <input type="text" name="phoneNumber" class="text" /><br />
             <div class="label">Email:</div> <input type="text" name="email" class="text" /><br />
             <div class="label">Password:</div> <input type="text" name="lastName" class="text" /><br />
 
             <h3>Preferences</h3>
+            @*Interval Length select box*@
             <div class="label">Interval Length:</div>
             <select class="select">
                 <option value="intervalLength">5</option>
                 <option value="intervalLength">10</option>
                 <option value="intervalLength">15</option>
                 <option value="intervalLength">20</option>
-                <option selected ="selected" value="intervalLength">25</option>
+                <option selected="selected" value="intervalLength">25</option>
                 <option value="intervalLength">30</option>
                 <option value="intervalLength">35</option>
                 <option value="intervalLength">40</option>
@@ -31,6 +37,7 @@
                 <option value="intervalLength">55</option>
                 <option value="intervalLength">60</option>
             </select> Minutes <br />
+            @*Short Break Length selectbox*@
             <div class="label">Short Break Length:</div>
             <select class="select">
                 <option selected="selected" value="shortBreakLength">5</option>
@@ -46,6 +53,7 @@
                 <option value="shortBreakLength">55</option>
                 <option value="shortBreakLength">60</option>
             </select> Minutes <br />
+            @*Long Break Length selectbox*@
             <div class="label">Long Break Length:</div>
             <select class="select">
                 <option value="longBreakLength">5</option>
@@ -61,20 +69,24 @@
                 <option value="longBreakLength">55</option>
                 <option value="longBreakLength">60</option>
             </select> Minutes <br />
-            <div class="label">Long Break After:</div> 
-                <select class="select">
-                    <option value="longBreakAfter">0</option>
-                    <option value="longBreakAfter">1</option>
-                    <option value="longBreakAfter">2</option>
-                    <option value="longBreakAfter">3</option>
-                    <option selected="selected" value="longBreakAfter">4</option>
-                    <option value="longBreakAfter">5</option>
-                    <option value="longBreakAfter">6</option>
-                    <option value="longBreakAfter">7</option>
-                    <option value="longBreakAfter">8</option>
-                    <option value="longBreakAfter">9</option>
-                    <option value="longBreakAfter">10</option>   
-                </select> Intervals <br />
+
+            @*Long Break After selectbox*@
+            <div class="label">Long Break After:</div>
+            <select class="select">
+                <option value="longBreakAfter">0</option>
+                <option value="longBreakAfter">1</option>
+                <option value="longBreakAfter">2</option>
+                <option value="longBreakAfter">3</option>
+                <option selected="selected" value="longBreakAfter">4</option>
+                <option value="longBreakAfter">5</option>
+                <option value="longBreakAfter">6</option>
+                <option value="longBreakAfter">7</option>
+                <option value="longBreakAfter">8</option>
+                <option value="longBreakAfter">9</option>
+                <option value="longBreakAfter">10</option>
+            </select> Intervals <br />
+
+            @*Daily interval goal selectbox*@
             <div class="label">Daily Interval Goal:</div>
             <select class="select">
                 <option value="dailyIntervalGoal">0</option>
@@ -90,10 +102,11 @@
                 <option value="dailyIntervalGoal">10</option>
             </select> Intervals <br />
 
+            @*Form buttons*@
             <button class="button">Edit</button>
             <button class="buton">Save</button>
             <button class="button">Cancel</button>
 
-</form>
+        </form>
     </div>
 </body>
