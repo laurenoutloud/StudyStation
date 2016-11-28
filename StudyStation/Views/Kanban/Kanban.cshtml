@@ -1,5 +1,5 @@
 ﻿@*Add title to viewbag*@
-@{ 
+@{
     ViewBag.Title = "Kanban";
 }
 
@@ -17,31 +17,48 @@
                     <th width="30%">Doing</th>
                     <th width="30%">Done</th>
                 </tr>
-                <tr>
-                    <td>Course 101</td>
-                    <td><div class="task">dfasd</div></td>
-                    <td></td>
-                    <td><div class="task">dfasd</div><div class="task">dfasd</div></td>
-                </tr>
-                <tr>
-                    <td>Course 202</td>
-                    <td><div class="task">dfasd</div><div class="task"> dfasd</div><div class="task"> dfasd</div></td>
-                    <td><div class="task">dfasd</div><div class="task">dfasd</div></td>
-                    <td><div class="task">dfasd</div></td>
-                </tr>
-                <tr>
-                    <td>Course 303</td>
-                    <td><div class="task">dfasd</div></td>
-                    <td><div class="task">dfasd</div></td>
-                    <td><div class="task">dfasd</div></td>
-                </tr>
-               
+                @{
+                    for (int i = 0; i < 5; i++)
+                    {
+                        <tr>
+                            <td>dksjfksj;lf</td>
+                            <td>
+                                @{for (int j = 0; j < 4; j++)
+                                    {
+                                        <div class="task">dskjf;afk</div>
+                                    }}
+                            </td>
+
+                            <td>
+                                @{for (int j = 0; j < 4; j++)
+                                    {
+                                        <div class="task">dskjf;afk</div>
+                                    }}
+                            </td>
+                            <td>
+                                @{for (int j = 0; j < 4; j++)
+                                    {
+                                        <div class="task">dskjf;afk</div>
+                                    }}
+                            </td>
+
+                        </tr>
+
+                                    }
+                }
+
+
             </table>
 
             @*TODO: add popups that allow user to enter information when buttons are selected*@
             @*TODO: Edit button to allow users to move tasks*@
             <button class="button">Add Course</button>
             <button class="button">Add Task</button>
+
+            <script language="javascript">
+                // alert('@ViewBag.Message');
+            </script>
+
 
         </form>
     </div>
