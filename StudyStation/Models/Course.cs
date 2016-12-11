@@ -7,6 +7,7 @@ namespace StudyStation.Models
 {
     public class Course
     {
-        public List<Task> TaskList;
+        public string CourseName;
+        public List<Task> Tasks;
     }
 }

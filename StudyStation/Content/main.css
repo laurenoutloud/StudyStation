@@ -43,14 +43,14 @@ body .button {
 body .timer {
     text-align: center;
     width: 75%;
-    height: 500px;
-    line-height: 500px;
+    
     margin: auto;
     border: 10px solid #90EE90;
     color: #fafafa;
     background: #7e7e7e;
     vertical-align: middle;
-    font-size: 400px;
+    font-size: 15vw;
+   
 }
 /*Format calendar placeholder*/
 body .calendar {

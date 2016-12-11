@@ -4,108 +4,185 @@
 }
 <body>
 
-
     <div class="container">
-        <form>
+        <form id="form">
             @*TODO: Disable everything unless edit button is selected*@
 
             @*Account settings text boxes*@
             <h3>Account</h3>
-            <div class="label">First Name:</div> <input type="text" name="firstName" class="text" /><br />
-            <div class="label">Last Name:</div> <input type="text" name="lastName" class="text" /><br />
+            <div class="label">First Name:</div> <input type="text" id="firstName" name="firstName" class="text" disabled="disabled" value="@ViewBag.CurrentUser.FirstName" /><br />
+            <div class="label">Last Name:</div> <input type="text" id="lastName" name="lastName" class="text" disabled="disabled" value="@ViewBag.CurrentUser.LastName" /><br />
             @*TODO: Make birthday date select*@
-            <div class="label">Birthday:</div> <input type="text" name="birthday" class="text" /><br />
+            <div class="label">Birthday:</div> <input type="text" id="birthday" name="birthday" class="text" disabled="disabled" value="@ViewBag.CurrentUser.Birthday" /><br />
             @*TODO: FOrmat Phone number textbox for numbers only*@
-            <div class="label">Phone Number:</div> <input type="text" name="phoneNumber" class="text" /><br />
-            <div class="label">Email:</div> <input type="text" name="email" class="text" /><br />
-            <div class="label">Password:</div> <input type="text" name="lastName" class="text" /><br />
+            <div class="label">Phone Number:</div> <input type="text" id="phoneNumber" name="phoneNumber" class="text" disabled="disabled" value="@ViewBag.CurrentUser.PhoneNumber" /><br />
+            <div class="label">Email:</div> <input type="text" id="email" name="email" class="text" disabled="disabled" value="@ViewBag.CurrentUser.Email" /><br />
+            <div class="label">Password:</div> <input type="text" id="password" name="password" class="text" disabled="disabled" value="@ViewBag.CurrentUser.Password" /><br />
 
             <h3>Preferences</h3>
             @*Interval Length select box*@
             <div class="label">Interval Length:</div>
-            <select class="select">
-                <option value="intervalLength">5</option>
-                <option value="intervalLength">10</option>
-                <option value="intervalLength">15</option>
-                <option value="intervalLength">20</option>
-                <option selected="selected" value="intervalLength">25</option>
-                <option value="intervalLength">30</option>
-                <option value="intervalLength">35</option>
-                <option value="intervalLength">40</option>
-                <option value="intervalLength">45</option>
-                <option value="intervalLength">50</option>
-                <option value="intervalLength">55</option>
-                <option value="intervalLength">60</option>
+            <select class="select" id="intervalLength" disabled="disabled">
+                <option>5</option>
+                <option>10</option>
+                <option>15</option>
+                <option>20</option>
+                <option selected ="selected">25</option>
+                <option>30</option>
+                <option>35</option>
+                <option>40</option>
+                <option>45</option>
+                <option>50</option>
+                <option>55</option>
+                <option>60</option>
             </select> Minutes <br />
+
             @*Short Break Length selectbox*@
             <div class="label">Short Break Length:</div>
-            <select class="select">
-                <option selected="selected" value="shortBreakLength">5</option>
-                <option value="shortBreakLength">10</option>
-                <option value="shortBreakLength">15</option>
-                <option value="shortBreakLength">20</option>
-                <option value="shortBreakLength">25</option>
-                <option value="shortBreakLength">30</option>
-                <option value="shortBreakLength">35</option>
-                <option value="shortBreakLength">40</option>
-                <option value="shortBreakLength">45</option>
-                <option value="shortBreakLength">50</option>
-                <option value="shortBreakLength">55</option>
-                <option value="shortBreakLength">60</option>
+            <select class="select" id="shortBreakLength" disabled="disabled">
+                <option selected="selected">5</option>
+                <option>10</option>
+                <option>15</option>
+                <option>20</option>
+                <option>25</option>
+                <option>30</option>
+                <option>35</option>
+                <option>40</option>
+                <option>45</option>
+                <option>50</option>
+                <option>55</option>
+                <option>60</option>
             </select> Minutes <br />
             @*Long Break Length selectbox*@
             <div class="label">Long Break Length:</div>
-            <select class="select">
-                <option value="longBreakLength">5</option>
-                <option value="longBreakLength">10</option>
-                <option selected="selected" value="longBreakLength">15</option>
-                <option value="longBreakLength">20</option>
-                <option value="longBreakLength">25</option>
-                <option value="longBreakLength">30</option>
-                <option value="longBreakLength">35</option>
-                <option value="longBreakLength">40</option>
-                <option value="longBreakLength">45</option>
-                <option value="longBreakLength">50</option>
-                <option value="longBreakLength">55</option>
-                <option value="longBreakLength">60</option>
+            <select class="select" id="longBreakLength" disabled="disabled">
+                <option>5</option>
+                <option>10</option>
+                <option selected="selected">15</option>
+                <option>20</option>
+                <option>25</option>
+                <option>30</option>
+                <option>35</option>
+                <option>40</option>
+                <option>45</option>
+                <option>50</option>
+                <option>55</option>
+                <option>60</option>
             </select> Minutes <br />
 
             @*Long Break After selectbox*@
             <div class="label">Long Break After:</div>
-            <select class="select">
-                <option value="longBreakAfter">0</option>
-                <option value="longBreakAfter">1</option>
-                <option value="longBreakAfter">2</option>
-                <option value="longBreakAfter">3</option>
-                <option selected="selected" value="longBreakAfter">4</option>
-                <option value="longBreakAfter">5</option>
-                <option value="longBreakAfter">6</option>
-                <option value="longBreakAfter">7</option>
-                <option value="longBreakAfter">8</option>
-                <option value="longBreakAfter">9</option>
-                <option value="longBreakAfter">10</option>
+            <select class="select" id="longBreakAfter" disabled="disabled">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option selected="selected">4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
             </select> Intervals <br />
 
             @*Daily interval goal selectbox*@
             <div class="label">Daily Interval Goal:</div>
-            <select class="select">
-                <option value="dailyIntervalGoal">0</option>
-                <option value="dailyIntervalGoal">1</option>
-                <option value="dailyIntervalGoal">2</option>
-                <option value="dailyIntervalGoal">3</option>
-                <option value="dailyIntervalGoal">4</option>
-                <option value="dailyIntervalGoal">5</option>
-                <option value="dailyIntervalGoal">6</option>
-                <option value="dailyIntervalGoal">7</option>
-                <option selected="selected" value="dailyIntervalGoal">8</option>
-                <option value="dailyIntervalGoal">9</option>
-                <option value="dailyIntervalGoal">10</option>
+            <select class="select" id="dailyIntervalGoal" disabled="disabled">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option selected="selected">8</option>
+                <option>9</option>
+                <option>10</option>
             </select> Intervals <br />
 
             @*Form buttons*@
-            <button class="button">Edit</button>
-            <button class="buton">Save</button>
-            <button class="button">Cancel</button>
+            <button class="button" onclick="edit(); return false;">Edit</button> @*return false prevents the onclick event from resetting the form*@
+            <button class="buton" onclick="save(); return false;">Save </button>
+            <button class="button" onclick="cancel();">Cancel</button>
+
+            <script language="javascript">
+
+
+                //Convert object in viewbag to Json object
+                var userInfo = @Html.Raw(Json.Encode(ViewBag.CurrentUser));
+
+
+
+
+                function edit() {
+
+                    enableSettings();
+
+                }
+
+                function save() {
+
+                    userInfo.FirstName = document.getElementById('firstName').value;
+                    userInfo.Birthday = document.getElementById('birthday').value;
+                    userInfo.PhoneNumber = document.getElementById('phoneNumber').value;
+                    userInfo.Email = document.getElementById('email').value;
+                    userInfo.Password = document.getElementById('password').value;
+                    userInfo.IntervalLength = document.getElementById('intervalLength').value;
+                    userInfo.ShortBreakLength = document.getElementById('shortBreakLength').value;
+                    userInfo.LongBreakLength = document.getElementById('longBreakLength').value;
+                    userInfo.LongBreakAfter = document.getElementById('longBreakAfter').value;
+                    userInfo.DailyIntervalGoal = document.getElementById('dailyIntervalGoal').value;
+
+                    document.getElementById('firstName').value = userInfo.FirstName;
+                    document.getElementById('firstName').value = userInfo.FirstName;
+                    document.getElementById('birthday').value = userInfo.Birthday;
+                    document.getElementById('phoneNumber').value = userInfo.PhoneNumber;
+                    document.getElementById('email').value = userInfo.Email;
+                    document.getElementById('password').value = userInfo.Password;
+                    document.getElementById('intervalLength').value = userInfo.IntervalLength;
+                    document.getElementById('shortBreakLength').value = userInfo.ShortBreakLength;
+                    document.getElementById('longBreakLength').value = userInfo.LongBreakLength;
+                    document.getElementById('longBreakAfter').value = userInfo.LongBreakAfter;
+
+                    disableSettings();
+
+                }
+
+
+                function cancel() {
+
+                    //by default, on click events refresh the page
+                    //so by not writing code for this onclick event,
+                    //the page will refresh and unsaved changes will be reset
+
+                }
+
+                function enableSettings() {
+                    var textBox = document.getElementsByClassName('text');
+                    for (var i = 0; i < textBox.length; i++) {
+                        textBox[i].removeAttribute("disabled");
+                    }
+                    var selectBox = document.getElementsByClassName('select');
+                    for (var i = 0; i < selectBox.length; i++){
+                        selectBox[i].removeAttribute("disabled");
+                    }
+                }
+
+                function disableSettings(){
+                    var textBox = document.getElementsByClassName('text');
+                    for (var i = 0; i < textBox.length; i++) {
+                        textBox[i].disabled = true;
+                       
+                    }
+                    var selectBox = document.getElementsByClassName('select');
+                    for (var i = 0; i < selectBox.length; i++){
+                        selectBox[i].disabled = true;
+                    }
+                }
+
+            </script>
 
         </form>
     </div>

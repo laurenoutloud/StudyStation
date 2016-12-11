@@ -167,7 +167,6 @@
     </Compile>
     <Compile Include="Infrastructure\HandleErrorAttribute.cs" />
     <Compile Include="Models\Course.cs" />
-    <Compile Include="Models\Settings.cs" />
     <Compile Include="Models\Task.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
