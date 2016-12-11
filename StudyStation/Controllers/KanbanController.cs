@@ -27,13 +27,13 @@ namespace StudyStation.Controllers
             currentUser.PhoneNumber = "555-555-5555";
             currentUser.Email = "sgomez@internet.com";
             currentUser.Password = "password";
-            
+
             currentUser.Courses = new List<Course>() {
                 new Course() {
                     CourseName ="English",
                     Tasks = new List<Task>()
                     {
-                        new Task() 
+                        new Task()
                         {
                             Text = "Write Essay",
                             Status = 1

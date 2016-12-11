@@ -9,92 +9,77 @@
     <div class="container">
         @*Selectbox for user to select desired time frame*@
         <div class="label">Select Time Frame:</div>
-            <select class="select">
-                <option>Today</option>
-                <option>This Week</option>
-                <option selected="selected">This Month</option>
-                <option>This Quarter (3 Months)</option>
-                <option>This Year</option>
-            </select>
+        <select class="select">
+            <option>Today</option>
+            <option>This Week</option>
+            <option selected="selected">This Month</option>
+            <option>This Quarter (3 Months)</option>
+            <option>This Year</option>
+        </select>
 
 
         <h3>Kanban Summary</h3>
         @*Table to provide a summary of all tasks that are currently on the virtual kanban wall*@
         <table class="summary">
+            @{ 
+                int toDoTasks=0, doingTasks=0, doneTasks = 0;
+                foreach (var course in ViewBag.CurrentUser.Courses)
+                {
+                    foreach (var task in course.Tasks)
+                    {
+                        if(task.Status == 1)
+                        {
+                            toDoTasks++;
+                        }
+                        if(task.Status == 2)
+                        {
+                            doingTasks++;
+                        }
+                        if(task.Status == 3)
+                        {
+                            doneTasks++;
+
+                        }
+                    }
+                }
+            }
+
             <tr>
                 <th width="33%">To Do</th>
                 <th width="33%">Doing</th>
                 <th width="33%">Done</th>
             </tr>
             <tr>
-                <td>7</td>
-                <td>8</td>
-                <td>3</td>
+                <td> @toDoTasks</td>
+
+                <td>@doingTasks</td>
+
+                <td>@doneTasks</td>
+
             </tr>
-            </table>
 
-            @*Container that will contain list of all completed tasks from within the selected time frame*@
-            <h3>Completed Tasks Wall</h3>
-            <div class="completedTaskWall">
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
-                <div class="task">dfasd</div>
+        </table>
 
-            </div>
+        @*Container that will contain list of all completed tasks from within the selected time frame*@
+        <h3>Completed Tasks Wall</h3>
+        <div class="completedTaskWall">
+            @foreach(var course in ViewBag.CurrentUser.Courses)
+            {
+                foreach(var task in course.Tasks)
+                {
+                    if (task.Status == 3)
+                    {
+                        <div class="task">@task.Text</div>
+                    }
+                }
+            }
 
+        </div>
 
-            <h3>Statistics</h3>
-            @*TODO: Implement graphs*@
-            <div class="graph">Graph Will Go Here</div>
-            <div class="graph">Graph Will Go Here</div>
-
+        @*TODO: Implement graphs
+        <h3>Statistics</h3>
+        
+        <div class="graph">Graph Will Go Here</div>
+        <div class="graph">Graph Will Go Here</div>
+            *@
 </body>
