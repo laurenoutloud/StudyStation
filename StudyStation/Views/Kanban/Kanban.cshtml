@@ -8,25 +8,26 @@
 <body>
 
 
-    <div class="container">
+    <div class="container"> @*container where body content goes*@
         <form>
 
-            <table class="kanban">
+            <table class="kanban"> @*Create Kanban wall in the form of a table*@
                 <tr>
+                    @*Create table headers*@
                     <th width="10%"></th>
                     <th width="30%">To Do</th>
                     <th width="30%">Doing</th>
                     <th width="30%">Done</th>
                 </tr>
 
-                @foreach(var course in ViewBag.CurrentUser.Courses)
+                @foreach(var course in ViewBag.CurrentUser.Courses) //loop through all the courses created by a user 
                 {
                     <tr>
-                        <td>@course.CourseName</td>
+                        <td>@course.CourseName</td> @*create a new row for each course name*@
                         <td>
-                        @foreach (var task in course.Tasks)
+                        @foreach (var task in course.Tasks) //loop through all of the tasks assigned to each course
                         {
-                            if (task.Status == 1)
+                            if (task.Status == 1) //if task status is one, put in To Do column
                             {
                                 <div class="task">@task.Text</div>
                             }
@@ -34,19 +35,19 @@
                         </td>
 
                         <td>
-                            @foreach (var task in course.Tasks)
+                            @foreach (var task in course.Tasks) //loop through all of the tasks assigned to each course
                             {
-                                if (task.Status == 2)
+                                if (task.Status == 2) //if task status is 2, put in Doing column
                                 {
                                     <div class="task">@task.Text</div>
                                 }
                             }
                         </td>
 
-                        <td>
-                            @foreach (var task in course.Tasks)
+                        <td> 
+                            @foreach (var task in course.Tasks) //loop through all of the tasks assigned to each course
                             {
-                                if (task.Status == 3)
+                                if (task.Status == 3) //if task status is 3, put in doing colum
                                 {
                                     <div class="task">@task.Text</div>
                                 }
@@ -60,6 +61,7 @@
             
             @*TODO: add popups that allow user to enter information when buttons are selected*@
             @*TODO: Edit button to allow users to move tasks*@
+            @*buttons to allow users to add, move (change the status us), and delete courses and task*@
             <button class="button" id="addCourse">Add Course</button>
             <button class="button" id="addTask">Add Task</button>
             <button class="button" id="moveTask">Move Task</button>

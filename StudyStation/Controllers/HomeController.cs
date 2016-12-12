@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using StudyStation.Models; //Include models to organize generated data
 
 namespace StudyStation.Controllers
 {
@@ -7,7 +8,7 @@ namespace StudyStation.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            return View(); //Open home view
         }
     }
 }

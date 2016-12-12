@@ -6,7 +6,6 @@
 
     <div class="container">
         <form id="form">
-            @*TODO: Disable everything unless edit button is selected*@
 
             @*Account settings text boxes*@
             <h3>Account</h3>
@@ -109,21 +108,18 @@
 
             <script language="javascript">
 
-
                 //Convert object in viewbag to Json object
                 var userInfo = @Html.Raw(Json.Encode(ViewBag.CurrentUser));
 
-
-
-
-                function edit() {
-
-                    enableSettings();
-
+                function edit(){ //function for edit button on click event 
+                    enableSettings(); //when edit button is selected, enabledSettings function is created to allow the user to make changes
                 }
 
-                function save() {
+                function save() { //function for save button on click event
 
+                    //when save button is selected, all of the information that was entered is stored in the JSON object which will
+                    //then repopulate the settings with the new information
+                    //TODO: once integrated with database, use Jquery to send data to controller to update database everytime save button is selected
                     userInfo.FirstName = document.getElementById('firstName').value;
                     userInfo.Birthday = document.getElementById('birthday').value;
                     userInfo.PhoneNumber = document.getElementById('phoneNumber').value;
@@ -146,12 +142,13 @@
                     document.getElementById('longBreakLength').value = userInfo.LongBreakLength;
                     document.getElementById('longBreakAfter').value = userInfo.LongBreakAfter;
 
-                    disableSettings();
+                    disableSettings();//after settings are saved, the disable settings function is called to prevent the user
+                    //from making further changes
 
                 }
 
 
-                function cancel() {
+                function cancel() { //cancel function for cancel button onclick event
 
                     //by default, on click events refresh the page
                     //so by not writing code for this onclick event,
@@ -159,31 +156,32 @@
 
                 }
 
-                function enableSettings() {
-                    var textBox = document.getElementsByClassName('text');
-                    for (var i = 0; i < textBox.length; i++) {
-                        textBox[i].removeAttribute("disabled");
+                function enableSettings() { //this function enables all of the text and select boxes on the page
+                    var textBox = document.getElementsByClassName('text'); //get all of the elements with the class name text (all the text boxes)
+                    for (var i = 0; i < textBox.length; i++) { //loop through them all
+                        textBox[i].removeAttribute("disabled"); //remove the disabled attribute to enable them
                     }
-                    var selectBox = document.getElementsByClassName('select');
-                    for (var i = 0; i < selectBox.length; i++){
-                        selectBox[i].removeAttribute("disabled");
+                    var selectBox = document.getElementsByClassName('select'); //get all of the elements with the class name select (all the select boxes)
+                    for (var i = 0; i < selectBox.length; i++){ //loop through them all
+                        selectBox[i].removeAttribute("disabled"); //remove the disabled attribute to enable them
                     }
                 }
 
-                function disableSettings(){
-                    var textBox = document.getElementsByClassName('text');
-                    for (var i = 0; i < textBox.length; i++) {
-                        textBox[i].disabled = true;
+                function disableSettings(){ //this function disables all of the text and select boxes on the page
+                    var textBox = document.getElementsByClassName('text'); //get all of the elements with the class name text (all the text boxes)
+                    for (var i = 0; i < textBox.length; i++) {//loop through them all
+                        textBox[i].disabled = true; //set the disabled attribute to true to disable them
                        
                     }
-                    var selectBox = document.getElementsByClassName('select');
-                    for (var i = 0; i < selectBox.length; i++){
-                        selectBox[i].disabled = true;
+                    var selectBox = document.getElementsByClassName('select');//get all of the elements with the class name select (all the select boxes)
+                    for (var i = 0; i < selectBox.length; i++){//loop through them all
+                        selectBox[i].disabled = true; //set the disabled attribute to true to disabled them
                     }
                 }
 
             </script>
-
+            @*Note: The views are all forms because eventually they will send data back to the controller once the application is integrated 
+                with a database*@
         </form>
     </div>
 </body>

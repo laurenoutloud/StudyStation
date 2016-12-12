@@ -1,73 +1,78 @@
 ﻿@*Add title to viewbag*@
 @{
-    ViewBag.Title = "Dashboard";
+    ViewBag.Title = "Dashboard";  //Put title in viewbag to be accessed by _Layout.cshtml
 }
 
 <body>
 
 
+@*
+    Commented out the date select option until I figure out how to integrate a calendar with the application
+
     <div class="container">
-        @*Selectbox for user to select desired time frame*@
-        <div class="label">Select Time Frame:</div>
-        <select class="select">
-            <option>Today</option>
-            <option>This Week</option>
-            <option selected="selected">This Month</option>
-            <option>This Quarter (3 Months)</option>
-            <option>This Year</option>
-        </select>
+        Selectbox for user to select desired time frame
+    <div class="label">Select Time Frame:</div>
+    <select class="select">
+        <option>Today</option>
+        <option>This Week</option>
+        <option selected="selected">This Month</option>
+        <option>This Quarter (3 Months)</option>
+        <option>This Year</option>
+    </select>
+*@
 
-
-        <h3>Kanban Summary</h3>
-        @*Table to provide a summary of all tasks that are currently on the virtual kanban wall*@
-        <table class="summary">
+        <h3>Kanban Summary</h3> @*Header of summary section*@
+            @*Note: The code below used to determine the number of tasks in each category may be better if done in the controller*@
             @{ 
-                int toDoTasks=0, doingTasks=0, doneTasks = 0;
-                foreach (var course in ViewBag.CurrentUser.Courses)
-                {
-                    foreach (var task in course.Tasks)
-                    {
-                        if(task.Status == 1)
-                        {
-                            toDoTasks++;
-                        }
-                        if(task.Status == 2)
-                        {
-                            doingTasks++;
-                        }
-                        if(task.Status == 3)
-                        {
-                            doneTasks++;
+                int toDoTasks=0, doingTasks=0, doneTasks = 0; @*Create variables that count the number of each task in each category(To do, doing, done)*@
 
-                        }
+            foreach (var course in ViewBag.CurrentUser.Courses) //use a for loop to loop through all of the courses 
+            {
+                foreach (var task in course.Tasks) //use a for loop to loop through all of the tasks in each course
+                {
+                    if(task.Status == 1) //if the task status is 1, incremement the To Do Tasks counter
+                    {
+                        toDoTasks++;
+                    }
+                    if(task.Status == 2) //if the task status is 2, increment the Doing Tasks counter
+                    {
+                        doingTasks++;
+                    }
+                    if(task.Status == 3) //if the task status is 3, increment the Done Tasks counter
+                    {
+                        doneTasks++;
+
                     }
                 }
             }
+            }
+    @*Table to provide a summary of all tasks that are currently on the virtual kanban wall*@
+    <table class="summary">
+        <tr>
+            @*Create table headers*@
+            <th width="33%">To Do</th>
+            <th width="33%">Doing</th>
+            <th width="33%">Done</th>
+        </tr>
+        <tr>
+            <td> @toDoTasks</td> @*insert total number of to do tasks*@
 
-            <tr>
-                <th width="33%">To Do</th>
-                <th width="33%">Doing</th>
-                <th width="33%">Done</th>
-            </tr>
-            <tr>
-                <td> @toDoTasks</td>
+            <td>@doingTasks</td> @*insert total number of doing tasks*@
 
-                <td>@doingTasks</td>
+            <td>@doneTasks</td> @*insert total number of done tasks*@
 
-                <td>@doneTasks</td>
+        </tr>
 
-            </tr>
-
-        </table>
+    </table>
 
         @*Container that will contain list of all completed tasks from within the selected time frame*@
         <h3>Completed Tasks Wall</h3>
         <div class="completedTaskWall">
-            @foreach(var course in ViewBag.CurrentUser.Courses)
+            @foreach(var course in ViewBag.CurrentUser.Courses) //loop through all the courses and all of the tasks again
             {
                 foreach(var task in course.Tasks)
                 {
-                    if (task.Status == 3)
+                    if (task.Status == 3) //if the tasks status is 3, add the task to the Completed task wall
                     {
                         <div class="task">@task.Text</div>
                     }

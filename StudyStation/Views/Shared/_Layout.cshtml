@@ -1,27 +1,32 @@
 ﻿<!DOCTYPE html>
-
+@*_Layout.cshtml is the skeleton for all of the views within the study station
+    application. All of the views contain all of the information on this page*@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link rel="stylesheet" href="~/Content/main.css" />
+    <link rel="stylesheet" href="~/Content/main.css" /> @*Link the main.css style sheet to this file. main.css contains the majority
+        of the code used for styling/formatting components of Study Station*@
 </head>
 
-@*Navigation Bar*@
+@*Navigation Bar that appears at the top of every single view*@
 <ul class="navbar">
     @*<li><a href="\Home\Index">Home</a></li>*@
-    <li><a href="\Dashboard\Dashboard">Dashboard</a></li>
-    <li><a href="\Kanban\Kanban">Kanban</a></li>
-    <li><a href="\Calendar\Calendar">Calendar</a></li>
-    <li><a href="\Study\Study">Study</a></li>
-    <li><a href="\Settings\Settings">Settings</a></li>
+    <li><a href="\Dashboard\Dashboard">Dashboard</a></li> @*Navigation bar link to dashboard view*@
+    <li><a href="\Kanban\Kanban">Kanban</a></li> @*Navigation bar link to kanban view*@
+    <li><a href="\Calendar\Calendar">Calendar</a></li> @*Navigation bar link to calendar view*@
+    <li><a href="\Study\Study">Study</a></li> @*Navigation bar link to study view*@
+    <li><a href="\Settings\Settings">Settings</a></li> @*Navigation bar link to settings view*@
+    @*Note: There is no link to the home (index) view from the Navigation Bar because home is only used to sign in or create an account only.
+        The user does not need access to the home view once they have logged in*@
 </ul>
 
 <body>
 
     <div class="container">
-        @*Display page title from viewbag*@
-        <h1>@ViewBag.Title</h1>
+        @*Create a container for all of the content to go in inside the body so that there are some margins around the outside *@
+
+        <h1>@ViewBag.Title</h1>@*get the title of the view from the ViewVag and display it at top of page*@
 
     </div>
 
@@ -30,7 +35,7 @@
     </div>
 
 
-    <div class="copyright">Study Station &copy; 2016</div>
+    <div class="copyright">Study Station &copy; 2016</div> @*Added copyright underneath body container*@
     @RenderSection("scripts", false)
 </body>
 
